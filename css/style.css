@@ -1601,10 +1601,6 @@
     box-shadow: 0 15px 35px 0 rgba(111, 105, 241, 0.3)
 }
 
-.:hover {
-    border-width: 2px
-}
-
 .faqgroup_cards {
     background-color: #fff;
     cursor: pointer;

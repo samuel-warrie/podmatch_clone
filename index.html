@@ -1507,13 +1507,13 @@ thanks to PodMatch’s built-in automations and streamlining features. (Typicall
                             <div class="w-100 mx-auto">
                                 <div class="d-flex gap-2 justify-content-sm-center justify_between justify_center tab w-100 overflow-x-scroll" style="max-width: 100%;">
                                     <button onclick="openPodmatch(event, 'Host')" class="tablinks tablink1 me-sm-1 pricing_button lh_128 transition_300 bg-white px-3 text-nowrap px-md-4 fw-medium font_sm color_lightblue" dmx-on:click="var_hide_pricing_header.setValue('Y')">
-                                {{browser1.viewport.width<556?'Host':'I’m a Host'}}
+                                {{browser1.viewport.width&lt;556?'Host':'I'm a Host'}}
                             </button>
                                     <button onclick="openPodmatch(event, 'Guest')" class="tablinks tablink2 me-sm-1 pricing_button lh_128 transition_300 bg-white px-3 text-nowrap px-md-4 fw-medium font_sm color_lightblue ms-md-1" dmx-on:click="var_hide_pricing_header.setValue('Y')">
-                                {{browser1.viewport.width<556?'Guest':'I’m a Guest'}}
+                                {{browser1.viewport.width&lt;556?'Guest':'I'm a Guest'}}
                             </button>
                                     <button onclick="openPodmatch(event, 'Both')" class="tablinks tablink3 me-sm-1 pricing_button lh_128 transition_300 bg-white px-3 text-nowrap px-md-4 fw-medium font_sm color_lightblue ms-md-1" dmx-on:click="var_hide_pricing_header.setValue('Y')">
-                                {{browser1.viewport.width<556?'Both':'I’m Both'}}
+                                {{browser1.viewport.width&lt;556?'Both':'I'm Both'}}
                             </button>
                                     <button onclick="openPodmatch(event, 'Agency')" class="tablinks tablink4 pricing_button lh_128 transition_300 bg-white px-3 text-nowrap px-md-4 fw-medium font_sm color_lightblue ms-md-1" dmx-on:click="var_hide_pricing_header.setValue('Y')">
                                 Agency

@@ -80,7 +80,8 @@
 
 .contracted {
     font-family: "Graphik" !important;
-    -webkit-text-size-adjust: 100% -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .contracted {
@@ -127,8 +128,7 @@
 }
 
 .contracted .color_yellow {
-    color: #ff9900;
-     !important;
+    color: #ff9900 !important;
 }
 
 .contracted .bg_white {
@@ -2681,8 +2681,7 @@
 }
 
 .ae_report .clr_yellow {
-    color: #ff9900;
-     !important;
+    color: #ff9900 !important;
 }
 
 .ae_report .bg_lightwhite {
@@ -6984,7 +6983,7 @@
     height: 100%;
     aspect-ratio: 16 / 9;
     position: relative;
-    pverflow: hidden;
+    overflow: hidden;
 }
 
 .about_us .purpose_behind_podmatch .video_container video {
@@ -9232,7 +9231,7 @@
 }
 
 #eventpage .visual-item {
-    aspect-ratio: 1280/720; //old: 714/356;
+    aspect-ratio: 1280/720; /* old: 714/356; */
     width: 100%;
     overflow: hidden;
     border-radius: 30px;
