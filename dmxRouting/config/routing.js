@@ -1,0 +1,1 @@
+dmx.config.mapping['a'] = 'link';

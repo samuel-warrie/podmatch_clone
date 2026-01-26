@@ -1,0 +1,1 @@
+dmx.Component('group', {});
