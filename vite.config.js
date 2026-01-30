@@ -42,7 +42,32 @@ export default defineConfig({
           dest: 'files'
         }
       ]
-    })
+    }),
+    {
+      name: 'preserve-external-links',
+      transformIndexHtml: {
+        order: 'post',
+        handler(html) {
+          const lines = html.split('\n');
+          const cssToPreserve = [
+            '<link rel="stylesheet" href="/bootstrap/5/css/bootstrap.min.css" />',
+            '<link rel="stylesheet" href="/fontawesome6/css/all.min.css" />',
+            '<link rel="stylesheet" href="/dmxAppConnect/dmxBootstrap5TableGenerator/dmxBootstrap5TableGenerator.css" />'
+          ];
+
+          const headEndIndex = lines.findIndex(line => line.includes('</head>'));
+          if (headEndIndex > -1) {
+            cssToPreserve.forEach(link => {
+              if (!html.includes(link)) {
+                lines.splice(headEndIndex, 0, '    ' + link);
+              }
+            });
+          }
+
+          return lines.join('\n');
+        }
+      }
+    }
   ],
   build: {
     rollupOptions: {
