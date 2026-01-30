@@ -13,13 +13,15 @@ $('.slider-nav').slick({
     slidesToScroll: 1,
     asNavFor: '.slider-for',
     dots: false,
-    centerMode: true,
+    centerMode: false,
     focusOnSelect: true,
+    infinite: false,
     responsive: [{
             breakpoint: 991,
             settings: {
                 slidesToShow: 5,
                 slidesToScroll: 1,
+                centerMode: false,
             }
         },
         {
@@ -27,6 +29,15 @@ $('.slider-nav').slick({
             settings: {
                 slidesToShow: 3,
                 slidesToScroll: 1,
+                centerMode: false,
+            }
+        },
+        {
+            breakpoint: 575,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                centerMode: false,
             }
         },
     ]
