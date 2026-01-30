@@ -40,6 +40,10 @@ export default defineConfig({
         {
           src: 'files/**/*',
           dest: 'files'
+        },
+        {
+          src: '_redirects',
+          dest: ''
         }
       ]
     }),
