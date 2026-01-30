@@ -336,18 +336,18 @@
                             </div>
                         </div>
 
-                        <button onclick="closeNav()" class="fw-semibold font_sm d-md-none text-black btn_login transition_03 lh_150 bg-transparent border-0 btn_login_sm" dmx-on:click="browsersh.goto('/login')">{{(identify.data.identity)?'Switch Account':'Login'}}</button>
-                        <button onclick="closeNav()" class="fw-semibold font_sm d-md-none clr_offwhite bttn_rsg lh_150 bttn_rsg_sm" dmx-on:click="run({condition:{if:`(identify.data.identity)`,then:{steps:{run:{action:`browsersh.goto(\'/redirect\')`,outputType:'text'}}},else:{steps:{condition:{if:`(querysh.data.ref)`,then:{steps:{run:{action:`browsersh.goto(\'/signup?ref=\'+querysh.data.ref)`,outputType:'text'}}},else:{steps:{run:{action:`browsersh.goto(\'/signup\')`,outputType:'text'}}},outputType:'boolean'}}},outputType:'boolean'}})">{{(identify.data.identity)?'Dashboard':'Signup'}}</button>
+                        <button onclick="closeNav()" class="fw-semibold font_sm d-md-none text-black btn_login transition_03 lh_150 bg-transparent border-0 btn_login_sm" dmx-on:click="browsersh.goto('/login')">Login</button>
+                        <button onclick="closeNav()" class="fw-semibold font_sm d-md-none clr_offwhite bttn_rsg lh_150 bttn_rsg_sm" dmx-on:click="run({condition:{if:`(identify.data.identity)`,then:{steps:{run:{action:`browsersh.goto(\'/redirect\')`,outputType:'text'}}},else:{steps:{condition:{if:`(querysh.data.ref)`,then:{steps:{run:{action:`browsersh.goto(\'/signup?ref=\'+querysh.data.ref)`,outputType:'text'}}},else:{steps:{run:{action:`browsersh.goto(\'/signup\')`,outputType:'text'}}},outputType:'boolean'}}},outputType:'boolean'}})">Signup</button>
                     </div>
                 </div>
                 <div class="d-none d-lg-block space_bttn align-items-center">
-                    <button class="fw-semibold font_sm text-black btn_login transition_03 lh_150 me-0 px-0 bg-transparent me-md-3 border-0" dmx-on:click="browsersh.goto('/login')">{{(identify.data.identity)?'Switch Account':'Login'}}</button>
-                    <button class="fw-semibold font_sm clr_offwhite bttn_rsg lh_150" dmx-on:click="run({condition:{if:`(identify.data.identity)`,then:{steps:{run:{action:`browsersh.goto(\'/redirect\')`,outputType:'text'}}},else:{steps:{condition:{if:`(querysh.data.ref)`,then:{steps:{run:{action:`browsersh.goto(\'/signup?ref=\'+querysh.data.ref)`,outputType:'text'}}},else:{steps:{run:{action:`browsersh.goto(\'/signup\')`,outputType:'text'}}},outputType:'boolean'}}},outputType:'boolean'}})">{{(identify.data.identity)?'Dashboard':'Signup'}}</button>
+                    <button class="fw-semibold font_sm text-black btn_login transition_03 lh_150 me-0 px-0 bg-transparent me-md-3 border-0" dmx-on:click="browsersh.goto('/login')">Login</button>
+                    <button class="fw-semibold font_sm clr_offwhite bttn_rsg lh_150" dmx-on:click="run({condition:{if:`(identify.data.identity)`,then:{steps:{run:{action:`browsersh.goto(\'/redirect\')`,outputType:'text'}}},else:{steps:{condition:{if:`(querysh.data.ref)`,then:{steps:{run:{action:`browsersh.goto(\'/signup?ref=\'+querysh.data.ref)`,outputType:'text'}}},else:{steps:{run:{action:`browsersh.goto(\'/signup\')`,outputType:'text'}}},outputType:'boolean'}}},outputType:'boolean'}})">Signup</button>
                 </div>
                 <div class="d-flex d-lg-none align-items-center gap-4">
                     <div class="d-none d-md-block position-relative d-lg-none me-2 space_bttn align-items-center">
-                        <button class="fw-semibold font_sm text-black btn_login transition_03 lh_150 bg-transparent me-md-3 border-0" dmx-on:click="browsersh.goto('/login')">{{(identify.data.identity)?'Switch Account':'Login'}}</button>
-                        <button class="fw-semibold font_sm bttn_rsg lh_150" dmx-on:click="run({condition:{if:`(identify.data.identity)`,then:{steps:{run:{action:`browsersh.goto(\'/redirect\')`,outputType:'text'}}},else:{steps:{condition:{if:`(querysh.data.ref)`,then:{steps:{run:{action:`browsersh.goto(\'/signup?ref=\'+querysh.data.ref)`,outputType:'text'}}},else:{steps:{run:{action:`browsersh.goto(\'/signup\')`,outputType:'text'}}},outputType:'boolean'}}},outputType:'boolean'}})">{{(identify.data.identity)?'Dashboard':'Signup'}}</button>
+                        <button class="fw-semibold font_sm text-black btn_login transition_03 lh_150 bg-transparent me-md-3 border-0" dmx-on:click="browsersh.goto('/login')">Login</button>
+                        <button class="fw-semibold font_sm bttn_rsg lh_150" dmx-on:click="run({condition:{if:`(identify.data.identity)`,then:{steps:{run:{action:`browsersh.goto(\'/redirect\')`,outputType:'text'}}},else:{steps:{condition:{if:`(querysh.data.ref)`,then:{steps:{run:{action:`browsersh.goto(\'/signup?ref=\'+querysh.data.ref)`,outputType:'text'}}},else:{steps:{run:{action:`browsersh.goto(\'/signup\')`,outputType:'text'}}},outputType:'boolean'}}},outputType:'boolean'}})">Signup</button>
                     </div>
                     <!--
             <button aria-label="menu" onclick="openNav()" class="d-lg-none position-relative bttn_nav overflow-hidden">
@@ -773,7 +773,7 @@
                 </span> Members
                     </h3>
                     <p class="text-center mt-sm-3 mt-4 generated_para_bottom_spaceing lh_150 font_md color_tundora" dmx-show="index.data.output_daily_bookings.toNumber().default(0)&gt;0">
-                        <span class="fw-semibold font_lg text-black d-sm-inline d-block">{{index.data.output_daily_bookings}} Interviews</span> Booked Within The Last 24 Hours
+                        <span class="fw-semibold font_lg text-black d-sm-inline d-block"><span dmx-text="index.data.output_daily_bookings"></span> Interviews</span> Booked Within The Last 24 Hours
                     </p>
                     <p class="text-center mt-sm-3 mt-4 generated_para_bottom_spaceing lh_150 font_md color_tundora" dmx-hide="index.data.output_daily_bookings.toNumber().default(0)&gt;0"></p>
                     <!--Space holder for formatting-->
@@ -792,9 +792,7 @@ episodes booked and released via PodMatch. (Total Listens are an estimate and re
                                         <div class="d-flex align-items-center gap-lg-4 gap-3">
                                             <img class="generated_icon_sizes" src="/assets/img/contracted/svg/headphone-icon.svg" alt="headphone-icon" />
                                             <div class="ps-lg-1">
-                                                <h3 class="fw-bold font_xl text-white lh_130 mb-0">
-                                                    {{index.data.output_total_downloads.toNumber().default(0).formatNumber(0, '.', ',')}}
-                                                </h3>
+                                                <h3 class="fw-bold font_xl text-white lh_130 mb-0" dmx-text="index.data.output_total_downloads.toNumber().default(0).formatNumber(0, '.', ',')">0</h3>
                                                 <p class="fw_medium font_base text-white lh_150 mb-0">
                                                     Total Listens
                                                 </p>
@@ -809,9 +807,7 @@ media posts about episodes booked and released via PodMatch. (Total Social Media
                                         <div class="d-flex align-items-center gap-lg-4 gap-3">
                                             <img class="generated_icon_sizes" src="/assets/img/contracted/svg/emojies.svg" alt="emojies" />
                                             <div class="ps-lg-1">
-                                                <h3 class="fw-bold font_xl text-white lh_130 mb-0">
-                                                    {{index.data.output_total_social_impressions.toNumber().default(0).formatNumber(0, '.', ',')}}
-                                                </h3>
+                                                <h3 class="fw-bold font_xl text-white lh_130 mb-0" dmx-text="index.data.output_total_social_impressions.toNumber().default(0).formatNumber(0, '.', ',')">0</h3>
                                                 <p class="fw_medium font_base text-white lh_150 mb-0">
                                                     Total Social Media Impressions
                                                 </p>
@@ -829,9 +825,7 @@ per interview have been saved thanks to PodMatch’s built-in messaging and deta
                                         <div class="d-flex align-items-center gap-lg-4 gap-3">
                                             <img class="generated_icon_sizes" src="/assets/img/contracted/svg/emails.svg" alt="emails" />
                                             <div class="ps-lg-1">
-                                                <h3 class="fw-bold font_xl text-white lh_130 mb-0">
-                                                    {{index.data.output_admin_emails_saved.toNumber().default(0).formatNumber(0, '.', ',')}}
-                                                </h3>
+                                                <h3 class="fw-bold font_xl text-white lh_130 mb-0" dmx-text="index.data.output_admin_emails_saved.toNumber().default(0).formatNumber(0, '.', ',')">0</h3>
                                                 <p class="fw_medium font_base text-white lh_150 mb-0">
                                                     Less Emails/Messages Exchanged
                                                 </p>
@@ -844,9 +838,7 @@ thanks to PodMatch’s built-in automations and streamlining features. (Typicall
                                         <div class="d-flex align-items-center gap-lg-4 gap-3">
                                             <img class="generated_icon_sizes" src="/assets/img/contracted/svg/administration-icon.svg" alt="administration-icon" />
                                             <div class="ps-lg-1">
-                                                <h3 class="fw-bold font_xl text-white lh_130 mb-0">
-                                                    {{index.data.output_admin_hours_saved.toNumber().default(0).formatNumber(0, '.', ',')}}
-                                                </h3>
+                                                <h3 class="fw-bold font_xl text-white lh_130 mb-0" dmx-text="index.data.output_admin_hours_saved.toNumber().default(0).formatNumber(0, '.', ',')">0</h3>
                                                 <p class="fw_medium font_base text-white lh_150 mb-0 pe-lg-0 pe-2">
                                                     Hours of Administration Saved
                                                 </p>
@@ -862,9 +854,7 @@ thanks to PodMatch’s built-in automations and streamlining features. (Typicall
                                 </span>
                                         <img class="serieous_podcaster_icon_abs generated_icon_sizes" src="/assets/img/contracted/svg/growth-icon.svg" alt="growth-icon" />
 
-                                        <h3 class="fw-bold font_xl text-white lh_130 mb-0 text-md-center">
-                                            {{index.data.output_total_payouts.toNumber().default(0).formatCurrency('$', '.', ',', 2)}}
-                                        </h3>
+                                        <h3 class="fw-bold font_xl text-white lh_130 mb-0 text-md-center" dmx-text="index.data.output_total_payouts.toNumber().default(0).formatCurrency('$', '.', ',', 2)">$0.00</h3>
                                         <p class="fw_medium font_base text-white lh_150 mb-0 text-md-center">
                                             This is How Much PodMatch Has Paid Serious Podcasters
                                         </p>
@@ -1494,9 +1484,18 @@ thanks to PodMatch’s built-in automations and streamlining features. (Typicall
                         <div class="bg-white rounded_42 rounded_sm_16 pricing_box">
                             <div class="w-100 mx-auto">
                                 <div class="d-flex gap-2 justify-content-sm-center justify_between justify_center tab w-100 overflow-x-scroll" style="max-width: 100%;">
-                                    <button onclick="openPodmatch(event, 'Host')" class="tablinks tablink1 me-sm-1 pricing_button lh_128 transition_300 bg-white px-3 text-nowrap px-md-4 fw-medium font_sm color_lightblue" dmx-on:click="var_hide_pricing_header.setValue('Y')">{{(browser1.viewport.width&lt;556)?'Host':'I\'m a Host'}}</button>
-                                    <button onclick="openPodmatch(event, 'Guest')" class="tablinks tablink2 me-sm-1 pricing_button lh_128 transition_300 bg-white px-3 text-nowrap px-md-4 fw-medium font_sm color_lightblue ms-md-1" dmx-on:click="var_hide_pricing_header.setValue('Y')">{{(browser1.viewport.width&lt;556)?'Guest':'I\'m a Guest'}}</button>
-                                    <button onclick="openPodmatch(event, 'Both')" class="tablinks tablink3 me-sm-1 pricing_button lh_128 transition_300 bg-white px-3 text-nowrap px-md-4 fw-medium font_sm color_lightblue ms-md-1" dmx-on:click="var_hide_pricing_header.setValue('Y')">{{(browser1.viewport.width&lt;556)?'Both':'I\'m Both'}}</button>
+                                    <button onclick="openPodmatch(event, 'Host')" class="tablinks tablink1 me-sm-1 pricing_button lh_128 transition_300 bg-white px-3 text-nowrap px-md-4 fw-medium font_sm color_lightblue" dmx-on:click="var_hide_pricing_header.setValue('Y')">
+                                        <span class="d-none d-sm-inline">I'm a Host</span>
+                                        <span class="d-inline d-sm-none">Host</span>
+                                    </button>
+                                    <button onclick="openPodmatch(event, 'Guest')" class="tablinks tablink2 me-sm-1 pricing_button lh_128 transition_300 bg-white px-3 text-nowrap px-md-4 fw-medium font_sm color_lightblue ms-md-1" dmx-on:click="var_hide_pricing_header.setValue('Y')">
+                                        <span class="d-none d-sm-inline">I'm a Guest</span>
+                                        <span class="d-inline d-sm-none">Guest</span>
+                                    </button>
+                                    <button onclick="openPodmatch(event, 'Both')" class="tablinks tablink3 me-sm-1 pricing_button lh_128 transition_300 bg-white px-3 text-nowrap px-md-4 fw-medium font_sm color_lightblue ms-md-1" dmx-on:click="var_hide_pricing_header.setValue('Y')">
+                                        <span class="d-none d-sm-inline">I'm Both</span>
+                                        <span class="d-inline d-sm-none">Both</span>
+                                    </button>
                                     <button onclick="openPodmatch(event, 'Agency')" class="tablinks tablink4 pricing_button lh_128 transition_300 bg-white px-3 text-nowrap px-md-4 fw-medium font_sm color_lightblue ms-md-1" dmx-on:click="var_hide_pricing_header.setValue('Y')">Agency</button>
                                 </div>
 
@@ -1515,7 +1514,7 @@ thanks to PodMatch’s built-in automations and streamlining features. (Typicall
                                                     Standard Host
                                                 </p>
                                                 <p class="color_tundora font_sm fw-normal lh_150 mb-3" style="min-height: 48px;">
-                                                    Join {{index.data.output_total_user_count_formatted}} other members on our most popular plan!
+                                                    Join <span dmx-text="index.data.output_total_user_count_formatted">thousands of</span> other members on our most popular plan!
                                                 </p>
                                                 <p class="lh_150 text-black font_md mb-lg-4 pb-lg-1 mb-3">
                                                     <span class="fw-semibold font_xl">{{global02_external_regular_pricing.data.output_standard_host_rate.toNumber().formatCurrency('$', '.', ',', 0)}}</span>/Per month
@@ -1720,7 +1719,7 @@ thanks to PodMatch’s built-in automations and streamlining features. (Typicall
                                                     Standard Guest
                                                 </p>
                                                 <p class="color_tundora font_sm fw-normal lh_150 mb-3" style="min-height: 48px;">
-                                                    Join {{index.data.output_total_user_count_formatted}} other members on our most popular plan!
+                                                    Join <span dmx-text="index.data.output_total_user_count_formatted">thousands of</span> other members on our most popular plan!
                                                 </p>
                                                 <p class="lh_150 text-black font_md mb-lg-4 pb-lg-1 mb-3">
                                                     <span class="fw-semibold font_xl">{{global02_external_regular_pricing.data.output_standard_guest_rate.toNumber().formatCurrency('$', '.', ',', 0)}}</span>/Per month
@@ -1905,7 +1904,7 @@ thanks to PodMatch’s built-in automations and streamlining features. (Typicall
                                                     Standard Both
                                                 </p>
                                                 <p class="color_tundora font_sm fw-normal lh_150 mb-3" style="min-height: 48px;">
-                                                    Join {{index.data.output_total_user_count_formatted}} other members on our most popular plan!
+                                                    Join <span dmx-text="index.data.output_total_user_count_formatted">thousands of</span> other members on our most popular plan!
                                                 </p>
                                                 <p class="lh_150 text-black font_md mb-lg-4 pb-lg-1 mb-3">
                                                     <span class="fw-semibold font_xl">{{(global02_external_regular_pricing.data.output_standard_host_rate.toNumber() + global02_external_regular_pricing.data.output_standard_guest_rate.toNumber()).formatCurrency('$', '.', ',', 0)}}</span>/Per
